@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mobile Responsive Navigation</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="flex">
+        <div class="logo">
+          <h1>MKEX</h1>
+        </div>
+        <nav>
+          <a href="#" class="active">Home</a>
+          <a href="#">About</a>
+          <a href="#">Services</a>
+          <a href="#">Contact</a>
+        </nav>
+        <div class="menu">
+          <img src="./menu.png" draggable="false" />
+        </div>
+      </div>
+    </header>
+
+    <script>
+      const menu = document.querySelector(".menu img");
+      const nav = document.querySelector("nav");
+
+      menu.addEventListener("click", function () {
+        nav.classList.toggle("active");
+        if (nav.classList.contains("active")) {
+          menu.src = "./clos.png";
+        } else {
+          menu.src = "./menu.png";
+        }
+      });
+    </script>
+  </body>
+</html>

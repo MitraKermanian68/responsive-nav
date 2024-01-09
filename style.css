@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background: linear-gradient(180deg, #6acbff, #ffffff);
+    min-height: 100vh;
+}
+
+header{
+    background: #6acbff;
+    padding: 1.5rem 8%;
+    box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.4);
+}
+
+.flex{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo h1{
+    color: #002438;
+    letter-spacing: 1px;
+    font-weight: bold;
+    font-size: 2.5rem;
+}
+
+nav a{
+    color: #333;
+    padding: 10px;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 1.225rem;
+    transition: 0.5s ease-in-out;
+}
+
+nav a.active{
+    color: #ffffff;
+}
+
+nav a:hover{
+    color: #ffffff;
+}
+
+.menu{
+    display: none;
+}
+
+.menu img{
+    width: 30px;
+    cursor: pointer;
+}
+
+
+/*----------------mobile responsive navbar -------------------*/
+
+@media (max-width: 991px){
+    header{
+        padding: 2rem;
+        position: sticky;
+        z-index: 1000;
+    }
+}
+
+@media (max-width: 756px){
+    .menu{
+        display: block;
+    }
+    nav{
+        position: absolute;
+        top: 99%;
+        right: 0;
+        left: 0;
+        width: 100%;
+        background: linear-gradient(#6acbff, #ffffff);
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        padding: 5px 0 20px;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+        transition: 0.5s ease-in-out;
+    }
+    nav a{
+        margin-top: 10px;
+    }
+    nav a.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+}
