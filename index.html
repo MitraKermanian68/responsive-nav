@@ -29,8 +29,8 @@
       const nav = document.querySelector("nav");
 
       menu.addEventListener("click", function () {
-        nav.classList.toggle("active");
-        if (nav.classList.contains("active")) {
+        nav.classList.toggle("hidden");
+        if (nav.classList.contains("hidden")) {
           menu.src = "./clos.png";
         } else {
           menu.src = "./menu.png";
