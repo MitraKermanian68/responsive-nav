@@ -81,13 +81,17 @@ nav a:hover{
         flex-flow: column;
         align-items: center;
         padding: 5px 0 20px;
-        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
-        transition: 0.5s ease-in-out;
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.5s ease-in-out;
     }
     nav a{
         margin-top: 10px;
     }
     nav a.active{
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+    .hidden{
+        max-height: 600px;
     }
 }
